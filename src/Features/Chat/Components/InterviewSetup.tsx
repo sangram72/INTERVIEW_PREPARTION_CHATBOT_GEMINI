@@ -30,7 +30,7 @@ const InterviewSetup = ({ onStart }: InterviewSetupProps) => {
         margin: '50px auto',
       }}
     >
-      <h1>Interview Prep AI</h1>
+      <h3>Interview Prep AI</h3>
 
 
 
