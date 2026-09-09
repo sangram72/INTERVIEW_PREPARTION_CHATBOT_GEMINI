@@ -1,7 +1,7 @@
 import { GoogleGenAI } from '@google/genai';
 
 const ai = new GoogleGenAI({
-  apiKey: import.meta.env.API_KEY
+  apiKey: process.env.API_KEY 
 });
 
 export const GET_CHAT = async (prompt: string) => {
