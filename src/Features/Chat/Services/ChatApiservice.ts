@@ -1,12 +1,18 @@
 import { GoogleGenAI } from '@google/genai';
 
-const ai = new GoogleGenAI({
-  apiKey: import.meta.env.VITE_API_KEY,
-});
-
-export const GET_CHAT = async (
+export const generateResponse = async (
   prompt: string
 ): Promise<string> => {
+  const apiKey = import.meta.env.VITE_API_KEY;
+
+  if (!apiKey) {
+    throw new Error('Gemini API key is missing');
+  }
+
+  const ai = new GoogleGenAI({
+    apiKey,
+  });
+
   const response = await ai.models.generateContent({
     model: 'gemini-3.8-flash',
     contents: prompt,
