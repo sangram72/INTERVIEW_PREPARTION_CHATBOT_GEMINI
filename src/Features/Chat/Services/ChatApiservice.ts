@@ -14,7 +14,7 @@ export const GET_CHAT = async (
   });
 
   const response = await ai.models.generateContent({
-    model: 'gemini-3.6-flash',
+    model: 'gemini-3.8-flash',
     contents: prompt,
   });
 
