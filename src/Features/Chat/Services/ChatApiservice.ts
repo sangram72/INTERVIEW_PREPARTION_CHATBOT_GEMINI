@@ -1,6 +1,6 @@
 import { GoogleGenAI } from '@google/genai';
 
-export const generateResponse = async (
+export const GET_CHAT = async (
   prompt: string
 ): Promise<string> => {
   const apiKey = import.meta.env.VITE_API_KEY;
